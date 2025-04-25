@@ -1,0 +1,100 @@
+*myplugin.txt*  A brief description of your plugin
+
+==============================================================================
+CONTENTS                                                *myplugin-contents*
+
+    1. Introduction ........................... |myplugin-introduction|
+    2. Requirements ........................... |myplugin-requirements|
+    3. Installation ........................... |myplugin-installation|
+    4. Configuration .......................... |myplugin-configuration|
+    5. Commands ............................... |myplugin-commands|
+    6. Mappings ............................... |myplugin-mappings|
+    7. Functions .............................. |myplugin-functions|
+    8. FAQ .................................... |myplugin-faq|
+    9. License ................................ |myplugin-license|
+
+==============================================================================
+INTRODUCTION                                         *myplugin-introduction*
+
+This is a brief description of what your plugin does.
+
+==============================================================================
+REQUIREMENTS                                         *myplugin-requirements*
+
+- Neovim >= 0.8.0
+- Any dependencies your plugin has
+
+==============================================================================
+INSTALLATION                                         *myplugin-installation*
+
+Using packer.nvim:
+>lua
+    use {
+        'yourusername/myplugin',
+        config = function()
+            require('myplugin').setup({
+                -- your configuration goes here
+            })
+        end
+    }
+<
+
+Using lazy.nvim:
+>lua
+    {
+        'yourusername/myplugin',
+        config = function()
+            require('myplugin').setup({
+                -- your configuration goes here
+            })
+        end
+    }
+<
+
+==============================================================================
+CONFIGURATION                                       *myplugin-configuration*
+
+Default configuration:
+>lua
+    require('myplugin').setup({
+        enabled = true,
+        keymaps = {
+            toggle = '<leader>mt',
+        },
+        -- Add more settings as needed
+    })
+<
+
+==============================================================================
+COMMANDS                                             *myplugin-commands*
+
+*:MyPluginToggle*
+    Toggle the plugin functionality.
+
+*:MyPluginCommand* [args]
+    Execute a plugin command with optional arguments.
+
+==============================================================================
+MAPPINGS                                             *myplugin-mappings*
+
+<leader>mt                                        *myplugin-toggle*
+    Toggle the plugin functionality.
+
+==============================================================================
+FUNCTIONS                                            *myplugin-functions*
+
+*myplugin.toggle()*
+    Toggle the plugin functionality.
+
+==============================================================================
+FAQ                                                  *myplugin-faq*
+
+Q: How do I do X with this plugin?
+A: You can do X by configuring Y.
+
+==============================================================================
+LICENSE                                              *myplugin-license*
+
+MIT License or specify your chosen license.
+
+Copyright (c) year yourusername
